@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="script.css">
+    <script src="https://kit.fontawesome.com/b3348ae33f.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="masterbox">
+        <h1 class="heading">TODO APP</h1>
+        <div class="description">
+            <div>
+                <span>DESCRIPTION </span>
+                <input type="text" class="inputText" placeholder="What do you want to add">
+            </div>
+            <div class="secondiv">
+                <span>
+                    <div class="dropdown">
+                      <p>CATEGORY</p>
+                      <button class="dropbtn">Category<span><i class="fa-solid fa-circle-chevron-down"></i></span></button>
+                      <div class="dropdown-content">
+                        <a href="#" class="option">Pernsal</a>
+                        <a href="#" class="option">Work</a>
+                        <a href="#" class="option">SChool</a>
+                        <a href="#" class="option">Cleaning</a>
+                        <a href="#" class="option">Other</a>
+                      </div>
+                    </div>
+                </span>                                   
+                <span>
+                    <p>DUE DATE</p>
+                    <input type="date" id="demo" min="2023-08-08">
+                </span>
+            </div>
+        </div>
+        <div>
+            <ul id="list">
+                <!-- <li>
+                        <input type="checkbox" id="task1" data-id="12" class="custom-checkbox">
+                        <label for="task1">Buy groceries</label>
+                        <i class=" delete data-id="12" fa-solid fa-trash"></i>
+                </li> -->
+            </ul>
+        </div>
+    </div>
+    <script type="text/javascript" src="design.js"></script>
+</body>
+</html>

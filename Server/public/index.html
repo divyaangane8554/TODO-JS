@@ -10,33 +10,34 @@
 <body>
     <div class="masterbox">
         <h1 class="heading">TODO APP</h1>
+        <form method="POST" id="createTodo" action="/todo">
         <div class="description">
             <div>
                 <span>DESCRIPTION </span>
-                <input type="text" class="inputText" placeholder="What do you want to add">
+                <input type="text" class="inputText" placeholder="What do you want to add" id="description">
             </div>
             <div class="secondiv">
                 <span>
-                    <div class="dropdown">
-                      <p>CATEGORY</p>
-                      <button class="dropbtn">Category<span><i class="fa-solid fa-circle-chevron-down"></i></span></button>
-                      <div class="dropdown-content">
-                        <a href="#" class="option">Pernsal</a>
-                        <a href="#" class="option">Work</a>
-                        <a href="#" class="option">SChool</a>
-                        <a href="#" class="option">Cleaning</a>
-                        <a href="#" class="option">Other</a>
-                      </div>
-                    </div>
-                </span>                                   
+                    <label for="category">CATEGORY</label>
+                    <select id="category" name="category">
+                     <option value="" disabled selected>Select a category</option>
+                      <option value="Personal">Personal</option>
+                      <option value="Work">Work</option>
+                      <option value="School">School</option>
+                      <option value="Cleaning">Cleaning</option>
+                      <option value="Other">Other</option>
+                    </select>
+                  </span>                                  
                 <span>
                     <p>DUE DATE</p>
-                    <input type="date" id="demo" min="2023-08-08">
+                    <input type="date" id="due-date" min="2023-08-08">
                 </span>
             </div>
         </div>
+        <button type="submit">Add Todo</button>
+        </form>
         <div>
-            <ul id="list">
+            <ul id="list-id">
                 <!-- <li>
                         <input type="checkbox" id="task1" data-id="12" class="custom-checkbox">
                         <label for="task1">Buy groceries</label>

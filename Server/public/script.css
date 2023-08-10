@@ -7,6 +7,7 @@ body{
     margin: auto;
     background-color: aliceblue;
     padding: 30px;
+    min-width: 500px;
 }
 
 .heading{
@@ -15,7 +16,6 @@ body{
 }
 
 .description{
-    text-align: center;
     padding: 10px;
     background-color: antiquewhite;
     border-radius: 30px;
@@ -23,10 +23,28 @@ body{
     padding-top: 30px;
 }
 
+
 .inputText{
-    padding: 5px;
+  width: 130px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  background-color: white;
+  background-image: url('searchicon.png');
+  background-position: 10px 10px; 
+  background-repeat: no-repeat;
+  padding: 10px 10px 10px 10px;
+  transition: width 0.4s ease-in-out;
 }
 
+input[type=text]:focus {
+  width: 100%;
+}
+
+.buttons{
+  text-align: center;
+}
 .secondiv {
     display: flex;
     flex-wrap: nowrap;
@@ -52,33 +70,79 @@ body{
     padding: 5px;
   }
   
-  /* Dropdown Content (Hidden by Default) */
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-  }
-  
-  /* Links inside the dropdown */
-  .dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-  }
-  
-  /* Change color of dropdown links on hover */
-  .dropdown-content a:hover {background-color: #f1f1f1}
-  
-  /* Show the dropdown menu on hover */
-  .dropdown:hover .dropdown-content {
-    display: block;
-  }
-  
-  /* Change the background color of the dropdown button when the dropdown content is shown */
-  .dropdown:hover .dropbtn {
-    background-color: #cad2ca;
-  }
+  /* Style for the todo list */
+#list-id {
+  list-style: none;
+  padding: 0;
+}
+
+/* Style for each todo item
+#list-id li {
+  border: 1px solid #ccc;
+  margin: 10px;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#category_display{
+  font-weight: 100;
+  background-color: aqua;
+  text-align: right;
+  height: 30px;
+  width: 80px;
+  text-align: center;
+  padding: 5px;
+} */
+
+/* Style for the todo list */
+#list-id {
+  list-style: none;
+  padding: 0;
+}
+
+/* Style for each todo item */
+#list-id li {
+  border: 1px solid #ccc;
+  margin: 10px;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex; /* Use flexbox to arrange content */
+  justify-content: space-between; /* Space between content */
+  align-items: center; /* Center vertically */
+}
+
+#category_display {
+  font-weight: 100;
+  background-color: aqua;
+  padding: 5px;
+  border-radius: 5px;
+  width: 80px;
+  text-align: center;
+}
+
+#description,
+#due-date {
+  flex: 1; /* Allow these elements to take remaining space */
+  text-align: right; /* Align to the right */
+}
+
+/* Style for the delete button */
+#delete-todos {
+  background-color: #ff5858;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+#add-todo {
+  background-color: green;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 3px;
+  cursor: pointer}

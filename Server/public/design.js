@@ -13,13 +13,24 @@ async function getAllTodos() {
         todoData.data.forEach((todo)=>{
           const li = document.createElement("li");
           li.innerHTML = `
-          <strong>Date:</strong> ${todo.dueDate}<br>
-          <strong>Description:</strong> ${todo.description}<br>
-          <strong>Category:</strong> ${todo.category}
-          <button type="button" data-id="${todo._id}">Delete</button>
-        `;
+          <div id="list-items">
+            <span><input type="checkbox" id="List-Checkbox" value=""><span>
+            <span id="description_display">${todo.description}<span><br>
+            <span><i class="fa-solid fa-calendar-days"></i><span><span>${todo.dueDate}<span><br>
+            <div id="category_display">${todo.category}<div>
+          <div>
+          `;
         todoList.appendChild(li);
         });
+
+        const deleteButtons = document.querySelectorAll(".delete-button");
+        deleteButtons.forEach(button => {
+        button.addEventListener("click", async event => {
+          const todoId = event.target.getAttribute("data-id");
+          await deleteTodoById(todoId);
+          await getAllTodos(); // Refresh the list after deletion
+        });
+      });
       }
       else{
         todoList.innerHTML = "No Todos Found"; 

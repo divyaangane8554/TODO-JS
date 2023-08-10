@@ -13,8 +13,8 @@
         <form method="POST" id="createTodo" action="/todo">
         <div class="description">
             <div>
-                <span>DESCRIPTION </span>
-                <input type="text" class="inputText" placeholder="What do you want to add" id="description">
+                <p>DESCRIPTION</p><br>
+                <input type="text" class="inputText" placeholder="Add Your Task here" id="description">
             </div>
             <div class="secondiv">
                 <span>
@@ -33,8 +33,11 @@
                     <input type="date" id="due-date" min="2023-08-08">
                 </span>
             </div>
+            <div class="buttons">
+                <button type="submit" id="add-todo">Add Todo</button>
+                <button type="button" id="delete-todos">DELETE</button>
+            </div>
         </div>
-        <button type="submit">Add Todo</button>
         </form>
         <div>
             <ul id="list-id">

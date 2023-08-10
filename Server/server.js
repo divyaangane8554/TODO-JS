@@ -42,10 +42,12 @@ app.get("/todo",async(req,res)=>{
     }
 })
 
+
 app.delete("/todo", async(req,res)=>{
     try{
       const {id} = req.body;
       const response = await Todo.findOneAndDelete({_id:id});
+      if(!response) return res.json({"message":"Todo Not found"}).status(400); 
       return res.json({"message":"Todo Deleted"}).status(200);
 
     }
